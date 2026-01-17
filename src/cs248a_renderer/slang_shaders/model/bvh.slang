@@ -27,7 +27,7 @@ public struct BVHNode
 }
 
 public struct BVH<T>
-    where T : IBoundingBox, IRayCastable
+    where T : IRayCastable
 {
     public struct HitResult
     {

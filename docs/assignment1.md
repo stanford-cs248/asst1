@@ -40,8 +40,66 @@ There's no dependency between these three tasks, but we strongly recommend you t
 
 Once you finished BVH implementation, you can enable BVH acceleration in the interactive renderer by clicking the `Build BVH` in the `Renderer` top menu item.
 
-### Grading and Handin
+### Grading
+Total 100 points
+- Correctness: 70 Points
+- Interview: 30 Points
 
-Assignment handin will be done on Gradescope. Instructions will be given soon.  
+The 70 points for correctness are divided as follows:
 
-We will release the full grading rubric on Wed Jan 14th. All programming assignments in CS248A will be graded via a 15 minute in-person conversation with a course CA.  The CAs will ask you to render various scenes, and ask you questions about your code.  Your grade will be a function of both your ability to demonstrate correct code and your team's ability to answer CA questions about the code.
+* **Part 1 (30 points)**
+    * Ray-triangle intersection (10 points)
+        * Seen tests (5 points)
+        * Unseen tests (5 points)
+    * Camera ray generation (10 points)
+    * Supersampling (5 points)
+    * Transforms (5 points)
+    * Extra Credit: 2D Triangle Rasterization (1 point)
+
+* **Part 2 (40 points)**
+    * Ray-volume intersection (10 points)
+        * Trilinear sampling (3 points)
+        * Ray marching (3 points)
+        * Normal estimation (4 points)
+    * SDF (10 points)
+        * Sphere tracing (5 points)
+        * SDF implementation (5 points)
+            * Cube
+            * Sphere
+    * BVH (20 points)
+        * Construction (10 points)
+        * Traversal (10 points)
+
+### Handin
+
+Assignment handin is open on Gradescope. You need to submit the following files. You need not follow the folder structure for submission, simply uploading the required .slang and .py files in the gradescope will do.  
+```bash
+asst1/
+├── notebooks/
+│   └── assignment1-part1/
+│       └── shaders/
+│           └── assignment1.slang
+└── src/
+    └── cs248a_renderer/
+        ├── model/
+        │   ├── bvh.py
+        │   └── scene_object.py
+        └── slang_shaders/
+            ├── math/
+            │   ├── bounding_box.slang
+            │   └── ray.slang
+            ├── model/
+            │   ├── bvh.slang
+            │   └── camera.slang
+            ├── primitive/
+            │   ├── sdf.slang
+            │   ├── triangle.slang
+            │   └── volume.slang
+            ├── texture/
+            │   └── texture.slang
+            └── renderer.slang
+```
+
+Deadline to submit is Wed, Jan 28 11:59 PM PST.
+
+All programming assignments in CS248A will be graded via a 15 minute in-person conversation with a course CA.  The CAs will ask you to render various scenes, and ask you questions about your code.  Your grade will be a function of both your ability to demonstrate correct code and your team's ability to answer CA questions about the code.

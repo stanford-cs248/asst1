@@ -33,7 +33,7 @@ public struct Volume
 
     /**
      * Get the uvw coordinates of a point in local space.
-     * @param p The point in world space.
+     * @param p The point in local space.
      * @return The uvw coordinates in [0, 1].
      */
     public float3 getUVW(float3 p)
